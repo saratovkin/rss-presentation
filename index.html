@@ -30,6 +30,11 @@
 				<p class="fragment">
 					is one of the most important parts of web development.
 				</p>
+				<aside class="notes">
+					Ensuring that your website or web application is secure is critical. Even simple bugs in your code can result
+					in private information being leaked, and somebody trying to steal private data.
+					Today I’m going to talk about web vulnerabilities and technologies that were made to fight with them.
+				</aside>
 			</section>
 			<section
 				data-background="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/686299/cover-Redesign-WebSecurityVulnerabilities-Luke_Newsletter-04d5cdafdaf363f0bc6aa723a391c343-91ee4d294318c967b26187f4d67a8351.png"
@@ -42,6 +47,32 @@
 				<p class="fragment"> Certificate Transparency </p>
 				<p class="fragment"> Subresource integrity </p>
 				<p class="fragment"> CORS </p>
+				<aside class="notes">
+					There are a lot of different types of web attacks and vulnerabilities. And because of this many security
+					technologies were created. Let's take a quick look at the most common ones:
+					· Content security policy (CSP)
+					CSP is an added layer of security that helps to detect and mitigate certain types of attacks, including
+					Cross-Site Scripting (XSS) and data injection attacks.
+					· Transport layer security (TLS)
+					The Transport Layer Security (TLS) protocol is the standard for enabling two networked applications or devices
+					to exchange information privately and robustly.
+					· HTTPS
+					HyperText Transfer Protocol Secure is an encrypted version of the HTTP protocol. It uses SSL or TLS to encrypt
+					all communication between a client and a server.
+					· HTTP Strict-Transport-Security
+					The Strict-Transport-Security: HTTP header lets a website specify that it may only be accessed using HTTPS.
+					· Certificate Transparency
+					Certificate Transparency is an open framework designed to protect against and monitor for certificate errors.
+					· Subresource Integrity
+					Subresource Integrity (SRI) is a security feature that enables browsers to verify that resources they fetch
+					are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a
+					fetched resource must match
+					· CORS
+					Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be
+					requested from another domain outside the domain from which the first resource was served. Let’s talk about
+					CORS in detail.
+
+				</aside>
 			</section>
 			<section
 				data-background="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/686299/cover-Redesign-WebSecurityVulnerabilities-Luke_Newsletter-04d5cdafdaf363f0bc6aa723a391c343-91ee4d294318c967b26187f4d67a8351.png"
@@ -50,6 +81,15 @@
 				<img class="fragment"
 					src="https://sun9-19.userapi.com/impf/MGd3d7JCjOFMacDqf31mrifIZ6WsZk3lR0C-DA/ooWIAdHpLhI.jpg?size=1200x674&quality=95&sign=7d57dc50c103478dd018090e76b8bc63&type=album"
 					alt="">
+				<aside class="notes">
+					CORS was originally proposed by Matt Oshry, Brad Porter, and Michael Bodell in 2004, but it was accepted as a
+					W3C Recommendation only in 2014. Nowadays, all modern browsers support CORS.
+
+					By default, the same-origin security policy forbids cross-origin access to resources in order to prevent
+					attacks such as XSS(Cross-Site Scripting). But CORS gives web servers the ability to interact with other
+					resources and do it securely.
+
+				</aside>
 			</section>
 			<section
 				data-background="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/686299/cover-Redesign-WebSecurityVulnerabilities-Luke_Newsletter-04d5cdafdaf363f0bc6aa723a391c343-91ee4d294318c967b26187f4d67a8351.png"
@@ -61,6 +101,17 @@
 						src="https://sun1.beltelecom-by-minsk.userapi.com/impf/0ygRRilY__Yg5-GxA5RW0ICT7fiOhD-Nc4Ibfw/5KjeXGR1q_E.jpg?size=2560x1344&quality=95&sign=ed10c89a75ccf893ed616dd8b033d66e&type=album"
 						alt="">
 				</div>
+				<aside class="notes">
+					Basic algorithm of CORS is pretty simple. All cross-origin HTTP requests besides GET, HEAD and POST are
+					forbidden. If you want to send one of the accessed requests, you have to use standard type-content and
+					standard HTTP headers. If these conditions are met, CORS will allow the request. Otherwise, you will get an
+					error.
+					But what if you want to make different HTTP requests or use custom headers and different type-content? First,
+					your browser sends a request to the server. Then the server must respond with the requested data along with an
+					ACAO (which stands for Access-Control-Allow-Origin) header indicating the requests from this origin are
+					allowed. This algorithm allows using cross-origin requests and keeps it secure and safe.
+
+				</aside>
 			</section>
 			<section
 				data-background="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/686299/cover-Redesign-WebSecurityVulnerabilities-Luke_Newsletter-04d5cdafdaf363f0bc6aa723a391c343-91ee4d294318c967b26187f4d67a8351.png"
@@ -69,6 +120,14 @@
 				<img
 					src="https://psv4.userapi.com/c235031/u95232385/docs/d30/1a791eb59463/login.png?extra=6jTBtL3KneOH3UFlAVReMulvWS3nWHdRA--E9oQQnn7DyheOUL2vMAnDKnJx0POD_5wHbPu0ESygpNV8PuQq_I67EgLNhtK0RqaWJu9_oiBsdux9EtnAHEFczzcShYk4BeQOJkYdsUltWkfqEki7EA"
 					alt="" style="width: 500px; height: 500px;">
+				<aside class="notes">
+					Now I’d like to talk about authentication. Authentication is one of the most important parts of web security.
+					We use it on almost every website.
+					But how to make authentication both secure and convenient at the same time? On modern web pages you stay
+					logged in even after closing the page or shutting down your computer. How is it possible?
+					One thing that makes this behavior possible is JWT. JWT or JSON Web Token is an Internet standard for creating
+					data with optional signature and optional encryption whose payload holds JSON objects.
+				</aside>
 			</section>
 			<section
 				data-background="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/686299/cover-Redesign-WebSecurityVulnerabilities-Luke_Newsletter-04d5cdafdaf363f0bc6aa723a391c343-91ee4d294318c967b26187f4d67a8351.png"
@@ -87,6 +146,10 @@
 						"admin": true
 					}
 				</code></pre>
+				<aside class="notes">
+					JWT consists of three main parts: Header, Payload and Signature. First two are JSON objects and the Signature
+					is based on Header and Payload.
+				</aside>
 			</section>
 			<section
 				data-background="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/686299/cover-Redesign-WebSecurityVulnerabilities-Luke_Newsletter-04d5cdafdaf363f0bc6aa723a391c343-91ee4d294318c967b26187f4d67a8351.png"
@@ -99,6 +162,16 @@
 					<li class="fragment">Client can get new access tokens with refresh token</li>
 					<li class="fragment">If refresh token is outdated client must authenticate again</li>
 				</ol>
+				<aside class="notes">
+					Scheme of work:
+					1) The client is authenticated in the application (for example, using a login and password)
+					2) In case of successful authentication, the server sends access and refresh tokens to the client.
+					3) When further accessing the server, the client uses an access token. The server checks the token for
+					validity and provides the client with access to resources
+					4) If the access token becomes invalid, the client sends a refresh token, in response to which the server
+					provides two refreshed tokens.
+					5) If the refresh token becomes invalid, the client must again go through the authentication process.
+				</aside>
 			</section>
 			<section
 				data-background="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/686299/cover-Redesign-WebSecurityVulnerabilities-Luke_Newsletter-04d5cdafdaf363f0bc6aa723a391c343-91ee4d294318c967b26187f4d67a8351.png"
@@ -106,6 +179,11 @@
 				<h2>Authorization. OAuth.</h2>
 				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Oauth_logo.svg/1200px-Oauth_logo.svg.png"
 					alt="" style="width: 500px; height: 500px;">
+				<aside class="notes">
+					Another important part of web security is Authorization. Authorization is needed in order to determine what
+					information is available to you as a user. I’d like to talk about one useful Authorization technology named
+					OAuth.
+				</aside>
 			</section>
 			<section
 				data-background="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/686299/cover-Redesign-WebSecurityVulnerabilities-Luke_Newsletter-04d5cdafdaf363f0bc6aa723a391c343-91ee4d294318c967b26187f4d67a8351.png"
@@ -114,11 +192,29 @@
 				<img class="fragment"
 					src="https://sun9-1.userapi.com/impf/RDzCfsJZooHdMReyliIlXwEzWdpmrFyQ-QP0Kw/i5yGvI25N-E.jpg?size=835x536&quality=95&sign=8ec034872c0737c66cff7b78d21303f4&type=album"
 					alt="">
+				<aside class="notes">
+					OAuth (Open Authorization) is an open standard for access delegation, commonly used as a way for Internet
+					users to grant websites or applications access to their information on other websites but without giving them
+					the passwords. This mechanism is used by companies such as Amazon, Google, Facebook, Microsoft and Twitter to
+					permit the users to share information about their accounts with third-party applications or websites.
+					Generally, OAuth provides clients a "secure delegated access" to server resources on behalf of a resource
+					owner. It specifies a process for resource owners to authorize third-party access to their server resources
+					without providing credentials. Designed specifically to work with Hypertext Transfer Protocol (HTTP), OAuth
+					essentially allows access tokens to be issued to third-party clients by an authorization server, with the
+					approval of the resource owner. The third party then uses the access token to access the protected resources
+					hosted by the resource server.
+				</aside>
 			</section>
 			<section
 				data-background="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/686299/cover-Redesign-WebSecurityVulnerabilities-Luke_Newsletter-04d5cdafdaf363f0bc6aa723a391c343-91ee4d294318c967b26187f4d67a8351.png"
 				data-background-opacity="0.2">
 				<h2>Thanks for watching</h2>
+				<aside class="notes">
+					All technologies and techniques presented in this presentation were designed to protect privacy and make user
+					experience safe and comfortable. However, web security will remain one of the most important parts of web
+					programming due to the constant emergence of new threats and vulnerabilities.
+					Thanks for watching and goodbye.
+				</aside>
 			</section>
 		</div>
 	</div>
